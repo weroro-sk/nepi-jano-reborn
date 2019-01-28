@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Nepi Jano! (reborn)",
+  "version": "1.2.2",
+  "description": "Read paid content on www.sme.sk",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://www.sme.sk/storm/*",
+    "https://artemis.sme.sk/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "main.js"
+      ],
+      "matches": [
+        "*://*.sme.sk/c/*",
+        "*://tv.sme.sk/v*"
+      ]
+    },
+    {
+      "js": [
+        "article.js"
+      ],
+      "matches": [
+        "*://*.sme.sk/c/*"
+      ]
+    },
+    {
+      "js": [
+        "video.js"
+      ],
+      "matches": [
+        "*://tv.sme.sk/v*"
+      ]
+    }
+  ],
+  "homepage_url": "https://github.com/weroro-sk/nepi-jano-reborn",
+  "icons": {
+    "16": "icon_16.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  }
+}
