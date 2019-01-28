@@ -8,7 +8,7 @@ class AjaxOptions {
 
 class Main {
 
-    private uri: string[];
+    private readonly uri: string[];
 
     public constructor() {
         this.uri = this.uriParser();
